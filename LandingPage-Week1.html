@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script type='text/javascript'>
+        var imageID=0;
+        function changeimage(every_seconds){
+            //change the image
+            if(!imageID){
+                document.getElementById("bckg").src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/d2/2f/7a/palace-from-the-outside.jpg?w=1000&h=-1&s=1";  alt="Bangalore Palace";
+                imageID++;
+            }
+            else if(imageID==1){
+                document.getElementById("bckg").src="https://www.holidify.com/images/cmsuploads/compressed/shutterstock_154851008_20200123162547_20200123162603.png"; alt="Lal Bagh Botanical Gardens"
+                imageID++;
+            }else if(imageID==2){
+                document.getElementById("bckg").src="https://www.clubmahindra.com/blog/media/section_images/unique-thi-9b61e9cde66c5b4.jpg"; alt="Vidhana Soudha, Bangalore"
+                imageID++;
+            }else if(imageID==3){
+                document.getElementById("bckg").src="https://images.thrillophilia.com/image/upload/s--D2PDVcDl--/c_fill,f_auto,fl_strip_profile,g_center,h_450,q_auto,w_752/v1/images/photos/000/147/971/original/1552397684_1520834836_Wonderla_Main_Shot_EXT_co7wl1.jpg.jpg"; alt="Wonderla Amusement Park, Bangalore"
+                imageID++;
+            }else if(imageID==4){
+                document.getElementById("bckg").src="https://www.fabhotels.com/blog/wp-content/uploads/2018/06/Shopping_1000x650_SubHeadImages_210618.jpg"; alt="Orion Mall, Bangalore";
+                imageID=0;
+            }
+            //call same function again for x of seconds
+            setTimeout("changeimage("+every_seconds+")",((every_seconds)*1000));
+        }
+        </script>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Bengaluru</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&family=Calligraffitti&display=swap');
+        *{
+            width:fit-1000px;}
+        h1{
+            font-family: 'Calligraffitti', cursive;
+            font-size:70px;
+            text-shadow: -15px 5px 20px #ced0d3;
+            letter-spacing: 0.02em;
+  text-align: center;
+  color: #F9f1cc;
+  text-shadow: 2.5px 2.5px 0px #ff9500, 
+    5px 5px 0px #c09316, 
+    7.5px 7.5px 0px  #5e0d35, 
+    10px 10px 0px #410d25, 
+    12.5px 12.5px 0px #4949c7, 
+    15px 15px 0px #0c1e36;
+        }
+        body{
+            background-image: url("https://th.bing.com/th/id/OIP.af8gM_4ie5xwr1v2CC9z6wHaEK?w=279&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7");
+            background-size: 100% 100%;
+        }
+        header{
+            margin-top: 0%;
+            background-color:rgba(126, 27, 91, 0.7);
+            min-height: 40px;
+            max-height: absolute;
+        }
+        nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-height:150px;
+}
+.logo img {
+    width: 60px;
+    border-radius: 50%;
+    height: auto;
+    left:10%;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size:20px;
+    transition: color 0.3s;
+}
+
+    
+        .card {
+            position: absolute;
+  top:30%;
+  left: 10%;
+  padding: 20px;
+ min-width: 10px;
+ max-width: 30%;
+ margin-top: 5px;
+ background-color: rgba(36, 37, 106, 0.8);
+ background-image: url("https://th.bing.com/th/id/OIP.k6_ORv0qpfOMcK6I5aiKhQHaEK?pid=ImgDet&rs=1");
+ background-size: 100% 100%;
+ opacity:0.6;
+ box-shadow: -10px 10px  8px 0px #093bb988;
+ text-align: center;
+ font-size: x-large;
+ border-radius: 30px;
+ color:rgb(0, 0, 0);
+ border-style: double;
+ border-color:rgb(15, 2, 34)
+}
+        .button{
+            padding:5px;
+            border-radius: 10px;
+            background-color: rgb(212, 0, 255);
+            box-shadow: -7px 7px  5px 0px #4b70cd88;
+            width:max-content;
+            font-size: 30px;
+            color: rgb(8, 15, 79);
+        }
+        .button:hover{
+            padding:5px;
+            border-radius: 14px;
+            background-color: rgb(83, 9, 123);
+            box-shadow: -9px 9px  7px 0px #4b70cd88;
+            width:max-content;
+            font-size: 35px;
+            color: rgb(194, 198, 235);
+        }
+        #bckg{
+            opacity:0.3;
+        }
+        .center-right {
+  position: absolute;
+  top: 30%;
+  font-family:serif;
+  right: 5%;
+  color: azure;
+  text-shadow: 1px 2px 3px blue;
+  font-size:23px ;
+  min-width:20%;
+  max-width:40%;
+}
+        .center-right:hover{
+            font-size:25px ;
+            color: whitesmoke;
+            text-shadow: 2px 3px 4px blue;
+
+        }
+    </style>
+</head>
+<body style='background:black;' onload='changeimage(5)'>
+    
+    <header>
+        <nav>  
+            <div class="logo">
+                <img src="https://th.bing.com/th?id=OIP.i8-Sr2Q11aeNaIpZFXn0EwHaH_&w=240&h=259&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" alt="Pet Management App Logo"  width =5% height="5%">
+            </div>
+            <center>
+                <h1>Welcome to Bengaluru</h1>
+            </center>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </nav>
+
+        
+    </header>
+    <div style='position:absolute;width:100%;height:100%;left:0px;top:0px;' text-align="center"align='center'>
+        <img  width=100%  id='bckg' src='https://th.bing.com/th/id/OIP.LeCKCKe9VqFvR5zl6O0PJwHaE8?pid=ImgDet&rs=1'/>
+        <div class="card">
+            <p style="font-size:25px; text-shadow:2px 2px 3px brown;">Book your tour to Bengaluru now!</p>
+            <p style="font-size: 20px;">Silicon Valley of India Welcomes You</p>
+            <center>
+            <a href="#" class="fas fa-plane"  style="color: #9129c2;"></a>  <font text-size="15px" color="black">Rs. 2,500</font><br>
+            <a href="#" class="fas fa-car"  style="color: #9129c2;"></a>  <font text-size="15px" color="black">Rs.10,000</font><br>
+            <font text-size="15px" text-shadow=" 3px 2px white" color="black">3 Days 1 Night</font><br><br>
+            <div class="button">
+                Book Now
+            </div>
+        </center>
+        </div>
+        <div class="center-right">Bengaluru, the city of gardens and dreams<br>
+            Where the past and the future meet in harmony<br>
+            Bengaluru, the city of science and art<br>
+            Where the mind and the soul find their spark<br><br>
+            
+            Bengaluru, the city of diversity and charm<br>
+            Where the people and the cultures blend with warmth<br>
+            Bengaluru, the city of joy and peace<br>
+            Where the visitors and the locals feel at ease<br>
+        </div>
+
+    </div>
+</body>
+</html>
+
